@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/miestilo.css">
+    <link rel="icon" type="image/png" href="imagenes/icono.png">
+    <title>Servicio de auxilio mecánico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- Pantalla Servicio solicitado -->
+  <div class="ventana" id="vent">
+  </div>
+
+  <!--------------------------------------HEADER-------------------------------------->
+  <header>
+    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="14365 FedericoFrank.html">F.F Emergencias</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#quienesSomos">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#formulario">Solicitar servicio</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!--------------------------------------INICIO-------------------------------------->
+
+      <div class="row text-center" id="inicio">
+          <h1>Servico de auxilio mecánico</h1><br>
+          <div class="conteiner" id="texto1">
+              <section class="conteiner">
+              <article class="col-xs-12 col-md-12">
+                  <p>
+                    ¿Tu seguro tarda mas de 2 horas para enviarte una grúa?
+                    Con nuestro localizador virtual podras ver cuanto demoraremos
+                    y el costo del traslado.
+                  </p>
+                    </article>
+                </section>
+          </div>
+      </div>
+          <div class="text-center" id="imagenPrincipal">
+            <img src="imagenes/principal.jpg" class="img-fluid" alt="...">
+          </div>
+
+  <!--------------------------------------QUIENES SOMOS-------------------------------------->
+
+      <div class="container-fluid" id="quienesSomos">
+      <h2 class="text-center" id="titulo2">Simple, seguro y confiable.</h2>
+      <div class="conteiner imagen_quienesSomos">
+        <img src="https://image.freepik.com/foto-gratis/sentirse-bien-mecanico-sosteniendo-neumatico-taller-reparacion-reemplazo-neumaticos-invierno-verano_146671-16780.jpg" id="imagen2" class="img" alt="...">
+      </div>
+      <div id="texto2">
+        <p class="conteiner text-center">
+            <b>En algún momento estuvimos en tu lugar, un domingo a la madrugada donde nadie podía darte una mano o tal vez
+            tu auxilio mecánico te tuvo esperando ya más de cuatro horas sin aun dar señales claras de que vaya a llegar.
+            En ese momento necesitábamos seguridad, si la persona que nos habla del otro lado del teléfono
+            nos decía que iban a demorar tres horas ¡En verdad sean tres horas y no que despues nos llamen para decirnos
+            “podrían” llegar a demorar hasta tres horas más!
+            </b>
+        </p>
+      </div>
+    </div>
+
+    <!--------------------------------------FORMULARIO-------------------------------------->
+
+    <form class="container sm-4 md-4 text-center" name="formulario" id="formulario">
+      <h3 class="text-center">Solicita tu servicio</h3>
+        <div class="text-center">
+            <label for="validationDefault01" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="align-content-center">
+            <label for="validationDefault02" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" required>
+        </div>
+        <div class="align-content-center">
+            <label class="form-label">Email</label>
+            <div class="input-group"><input type="email" class="form-control" id="email" required>
+            </div>
+        </div>
+        <div class="conteiner text-center vehiculo">
+        <select name="" id="ubicacion">
+            <option value="Caba">Caba</option>
+            <option value="Mas lejos">Mas lejos</option>
+        </select>
+        <select name="" id="vehiculo">
+            <option value="moto">Moto</option>
+            <option value="auto">Auto</option>
+            <option value="camioneta">Camioneta</option>
+        </select>
+        </div>
+            <input type="number" name="distancia" min="20" max="2000" id="distancia">  Distancia a trasladar (kilometros)
+        <div class="col-12" id="boton_servicio">
+          <button class="btn btn-primary" id="submit" type="submit">Solicitar servicio</button>
+        </div>
+    </form>
+  <div">
+      <div class="conteiner text-center" d="contenedor">
+        <div id="datos">  
+        </div>
+      </div>
+  
+  <!--------------------------------------ULTIMA SOLICITUD-------------------------------------->
+
+      <h3 class="conteiner text-center" id="solicitud" >Tu ultima solicitud</h3>
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Costo del servicio</th>
+            <th>Tiempo de espera</th>
+          </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+      </table>
+
+  <!--------------------------------------FOOTER SECTION-------------------------------------->   
+      
+  <footer class="conteiner" id="footer2">
+	<ul class="footer">
+    <!--REDES SOCIALES-->
+		<li><a href="http://facebook.com">Faceboook</a></li>
+		<li><a href="http://instagram.com">Instagram</a></li>
+		<li><a href="contactar.html">Twitter</a></li>
+	</ul>
+  <div class="conteiner" id="footer__p">
+              </svg> Copyright &#169; 2024 Federico Frank proyecto de coderhouse javascript</p>
+  </div>
+  </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/miestilo.css">
+</body>
+</html>
